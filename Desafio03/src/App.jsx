@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Elo from "./assets/Captura de tela 2024-05-25 161756.png"
+import ManageData from './Components/ManageData'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,8 @@ function App() {
       Você tem que importar ela como está na parte de cima da página, e depois você coloca na tag img, tirando as aspas duplas e colocando uma interpolação {e aqui dentro vai o nome que você deu na importação que criou}, a tag div é opicional*/}
       <div>
         <img src={Elo} alt="elo league of legends" />
+
+        <ManageData></ManageData>
       </div>
 
     </>
