@@ -10,8 +10,15 @@ import CarDetails from './components/CarDetails';
 
 
 function App() {
-  let name = "Tata"
   const [userName] = useState("Maria");
+
+  const [cars] = [
+    {id:1, brand: "Ferrari", color: "Amarela", newCar: true, km:0},
+    {id:1, brand: "Kia", color: "Branco", newCar: false, km:34343},
+    {id:1, brand: "Renault", color: "Azul", newCar: false, km:234},
+    {id:1, brand: "Pegeout", color: "Verde", newCar: false, km:80000}
+  ]
+
   return (
   <>
 
@@ -22,10 +29,17 @@ function App() {
   {/* Props */}
   <ShowUserName name={userName}/> 
   {/* Destructuring */}
-  <CarDetails brand="BMW" km={100000} color="Preto"/>
+  <CarDetails brand="BMW" km={100000} color="Preto" newCar={true}/>
   {/* Loop arrays de objetos */}
-  
-  </>
+  {cars.map((car)=>(
+      <CarDetails 
+      brand={car.brand} 
+      color={car.color} 
+      km={car.km}
+      newCar={car.newCar} 
+      />
+    ))}
+    </>
   );
 }
 
