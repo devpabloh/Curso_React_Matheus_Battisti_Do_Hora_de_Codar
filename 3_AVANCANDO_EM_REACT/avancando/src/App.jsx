@@ -23,6 +23,8 @@ function App() {
   <ShowUserName name={userName}/> 
   {/* Destructuring */}
   <CarDetails brand="BMW" km={100000} color="Preto"/>
+  {/* Loop arrays de objetos */}
+  
   </>
   );
 }
