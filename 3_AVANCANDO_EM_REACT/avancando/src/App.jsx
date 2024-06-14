@@ -25,6 +25,9 @@ function App() {
   <CarDetails brand="BMW" km={100000} color="Preto" newCar={true}/>
   {/* Loop arrays de objetos */}
 
+  {/* children */}
+  
+
     </>
   );
 }
