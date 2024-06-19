@@ -1,7 +1,6 @@
 
 import './App.css';
 import CarDetails from './components/CarDetails/CarDetails';
-
 function App() {
   
   const MyCars = [
@@ -16,7 +15,9 @@ function App() {
     <h1>Show Room</h1>
     <div className='carContainer'>
       {MyCars.map((car)=>{
-        <CarDetails car={car} />
+        return (
+          <CarDetails cars={car}/>
+        )
       })}
     </div>
 
