@@ -7,13 +7,13 @@ const url = "http://localhost:3000/products";
 function App() {
   const [products, setProducts] = useState([]);
 
-  useEffect(async () => {
-    const res = await fetch(url);
-
-    const data = await res.json();
-
-    setProducts(data);
-
+  useEffect(() => {
+    async function fetchdata(){
+      const res = await fetch(url);
+      const data = res.json();
+      setProducts(data);
+    }
+    fetchdata()
   },[]);
 
   console.log(products);
