@@ -7,29 +7,43 @@ const url = "http://localhost:3000/products";
 function App() {
   const [products, setProducts] = useState([]);
   const [name, setName] = useState("");
-  const [price, setPrice]= useState("")
+  const [price, setPrice]= useState("");
 
   // 1 - resgatando dados
   useEffect(() => {
     async function fetchData(){
       const res = await fetch(url);
       const data = await res.json();
-      setProducts(data);
+      setProducts(data.products);
     }
     fetchData();
   },[]);
 
   const handleSubmit = async (e)=>{
+    e.preventDefault()
 
-  }
+    const product = {
+      name: name, 
+      price: price,
+      
+    };
+    
+    const res = await fetch(url, {
+      method: "POST", 
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(product),
+    });
+  };
 
   return (
     <div className="App">
       <h1>Lista de produtos</h1>
       <ul>
-        {products.map((produtos)=>(
-           <li key={produtos.id}>
-            {produtos.name} 
+        {products.map((produto)=>(
+           <li key={produto.id}>
+            {produto.name} 
             </li>
         ))}
       </ul>
