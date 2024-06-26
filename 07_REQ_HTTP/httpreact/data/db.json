@@ -39,6 +39,96 @@
       "id": "d6ec",
       "name": "ssd",
       "price": "4"
+    },
+    {
+      "id": "cb4a",
+      "name": "shots",
+      "price": "10"
+    },
+    {
+      "id": "1000",
+      "name": "camisa",
+      "price": "30"
+    },
+    {
+      "id": "504e",
+      "name": "camisa",
+      "price": "30"
+    },
+    {
+      "id": "85b1",
+      "name": "camisa",
+      "price": "30"
+    },
+    {
+      "id": "8211",
+      "name": "camisa",
+      "price": "30"
+    },
+    {
+      "id": "cc0b",
+      "name": "camisa",
+      "price": "30"
+    },
+    {
+      "id": "af3d",
+      "name": "camisa",
+      "price": "30"
+    },
+    {
+      "id": "a61d",
+      "name": "camisa",
+      "price": "30"
+    },
+    {
+      "id": "f92c",
+      "name": "receba",
+      "price": "300"
+    },
+    {
+      "id": "537a",
+      "name": "receba",
+      "price": "300"
+    },
+    {
+      "id": "3d90",
+      "name": "receba",
+      "price": "300"
+    },
+    {
+      "id": "aa7f",
+      "name": "receba",
+      "price": "300"
+    },
+    {
+      "id": "07fa",
+      "name": "codar",
+      "price": "30"
+    },
+    {
+      "id": "b8a0",
+      "name": "codar 40",
+      "price": "444"
+    },
+    {
+      "id": "37bd",
+      "name": "codar 40",
+      "price": "444"
+    },
+    {
+      "id": "c7fe",
+      "name": "codar 40",
+      "price": "444"
+    },
+    {
+      "id": "f542",
+      "name": "codar 40",
+      "price": "444"
+    },
+    {
+      "id": "0f18",
+      "name": "codar 40",
+      "price": "444"
     }
   ]
 }

@@ -11,8 +11,7 @@ function App() {
   const [products, setProducts] = useState([]);
 
   // 4 - custom   
-  const{ data:items }  = useFetch(url)
-  console.log(data)
+  const{ data:items, httpConfig, loading }  = useFetch(url) //aqui ele importou os dados do data usando const{data}= useFetch(url), e usou a abordagem de alterar/ renomeou os dados para items, colocando os dois pontos :items dentro da importação const{data:items}= useFetch(url), para utilizar eles em determinadas partes no código, que agora vai utilizar na li, para puxar e renderizar os dados na tela. Se com isso der algum erro no map, que vai ser realizado utilizando os valores que os items vão trazer da API, basta criar um if(se) antes para tratar desses items que não tem ainda valores nele e o map só ser executado se tiver valores {items && items.map((product) =>())}
 
   const [name, setName] = useState("");
   const [price, setPrice]= useState("");
@@ -39,7 +38,7 @@ function App() {
       
     };
     
-    const res = await fetch(url, {
+    /* const res = await fetch(url, {
       method: "POST", 
       headers: {
         "content-type": "application/json",
@@ -50,7 +49,8 @@ function App() {
     // 3 - Carregamento dinâmico
 
     const addedProduct = await res.json();
-    setProducts((prevProducts)=>[...prevProducts, addedProduct])
+    setProducts((prevProducts)=>[...prevProducts, addedProduct]) */
+    httpConfig(product, "POST");
 
     setName("");
     setPrice("");
@@ -61,14 +61,16 @@ function App() {
   return (
     <div className="App">
       <h1>Lista de produtos</h1>
-      <ul>
-        {items.map((produto)=>(
+      {/* Loading */}
+      {loading && <p>Carregando dados...</p>}
+      <ol>
+        {items && items.map((produto) => ( // items && items é uma condicional if, para quando tiver dados dos itens fazer o map, se não, não faz, isso serve para resolver os erros de quando não tiver dados.
             <li key={produto.id}>
               {produto.name} -
               R${produto.price}
             </li>
         ))}
-      </ul>
+      </ol>
       <div className="add-product">
         <form onSubmit={handleSubmit}>
           <label>
@@ -82,8 +84,9 @@ function App() {
             <input type="number" value={price} name='price' onChange={(e)=>{
               setPrice(e.target.value)
             }} />
-            <input type="submit" value={"Criar produto"} className='add-product' />
           </label>
+          {loading && <input type="submit" value={"aguarde"} disabled className='Aguarde' />}
+          {!loading && <input type="submit" value={"Criar produto"} />}
         </form>
       </div>
     </div>
