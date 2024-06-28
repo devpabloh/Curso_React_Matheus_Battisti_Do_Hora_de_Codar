@@ -1,15 +1,16 @@
-
 import './App.css';
 
 // 1 - configurando react router
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 // 2 - pages import
-import About from "./pages/About"
-import Home from "./pages/home"
+import About from "../pages/About"
+import Home from "../pages/home"
 
 // 3 - Importar os componentes
-import NavBar from './components/NavBar/NavBar';
+import NavBar from '../components/NavBar/NavBar';
+
+import { useFetch } from '../hooks/useFetch';
 
 function App() {
   return (
@@ -29,3 +30,4 @@ function App() {
 }
 
 export default App;
+

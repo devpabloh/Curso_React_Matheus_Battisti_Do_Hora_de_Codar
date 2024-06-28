@@ -1,0 +1,25 @@
+{
+    "products": [
+      {
+        "id": "f555",
+        "name": "camisa",
+        "price": "50.00"
+      },
+      {
+        "id": "f556",
+        "name": "Bermuda",
+        "price": "40.00"
+      },
+      {
+        "id": "f557",
+        "name": "Sapato",
+        "price": "100.00"
+      },
+      {
+        "id": "f558",
+        "name": "cinto",
+        "price": "20.00"
+        
+      }
+    ]
+  }
