@@ -6,7 +6,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 // 2 - pages import
 import About from "./pages/About"
-import Home from "./pages/home"
+import Home from "./pages/Home"
 
 // 3 - Importar os componentes
 import NavBar from './components/NavBar/NavBar';
