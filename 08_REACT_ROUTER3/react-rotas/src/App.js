@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import Info from './pages/info';
+import NotFound from "./pages/NotFound"
 
 // 3 - Importar os componentes
 import NavBar from './components/NavBar/NavBar';
@@ -27,6 +28,8 @@ function App() {
           <Route path="/products/:id" element={<Product/>}></Route>
           {/* 6 - nested route */}
           <Route path='/products/:id/info' element={<Info></Info>} ></Route>
+          {/* 7 - no match rout */}
+          <Route path='#' element={<NotFound/>} ></Route>
         </Routes>
       </BrowserRouter>
       
